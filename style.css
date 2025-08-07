@@ -1,0 +1,163 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: #111;
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 2em;
+}
+
+.search-box {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+}
+
+/* Banner Section */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.9;
+}
+
+/* Welcome Section */
+.welcome {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+}
+
+.welcome h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #e9e9e9;
+}
+
+.gallery-item {
+    background-size: cover;
+    background-position: center;
+    width: 30%;
+    height: 200px;
+    margin: 10px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.gallery-item:nth-child(1) {
+    background-image: url('strong password.png');
+}
+
+.gallery-item:nth-child(2) {
+    background-image: url('awareness.png');
+}
+
+.gallery-item:nth-child(3) {
+    background-image: url('secure.png');
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Content Sections */
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-section img {
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+.content-section .text {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 90%;
+    }
+
+    .content-section,
+    .content-section.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-section img,
+    .content-section .text {
+        width: 100%;
+    }
+}
